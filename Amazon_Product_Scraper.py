@@ -4,7 +4,7 @@ import csv
 import re 
 
 Query = str(input('Enter the query: ')).strip()
-file = Query.replace(' ','_')
+fileString = Query.replace(' ','_')
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=False)
     page2 = browser.new_page()
@@ -63,4 +63,4 @@ with sync_playwright() as p:
             page.close()
             time.sleep(1)
     browser.close()
-    print(f"✅ Data successfully saved to {file}.csv")
+    print(f"✅ Data successfully saved to Scraped_Data/{fileString}.csv")
