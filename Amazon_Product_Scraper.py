@@ -63,4 +63,4 @@ with sync_playwright() as p:
             page.close()
             time.sleep(1)
     browser.close()
-    print("✅ Data successfully saved to amazon_data.csv")
+    print(f"✅ Data successfully saved to {file}.csv")
